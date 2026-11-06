@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практическая работа 3 — доска публикаций</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <h1>Доска публикаций</h1>
+      <p class="lead">
+        Практическая работа № 3. Публикации загружаются и создаются через REST API.
+      </p>
+
+      <div id="messages" class="messages" hidden></div>
+
+      <section class="card" aria-labelledby="list-title">
+        <h2 id="list-title">Публикации</h2>
+        <button id="load-btn" type="button">Загрузить публикации</button>
+        <ul id="post-list" class="post-list"></ul>
+      </section>
+
+      <section class="card" aria-labelledby="form-title">
+        <h2 id="form-title">Новая публикация</h2>
+        <form id="post-form" novalidate>
+          <label>
+            Заголовок
+            <input id="title" name="title" type="text" autocomplete="off" />
+          </label>
+          <label>
+            Текст
+            <textarea id="body" name="body" rows="4"></textarea>
+          </label>
+          <button type="submit">Создать публикацию</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
